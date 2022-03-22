@@ -1,0 +1,15 @@
+<br>
+<br>
+ <div class="container">
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+
+
+<%= link_to edit_article_path do%>
+<button type="button" class="btn btn-primary">Edit article</button>
+<% end %>
+<%= link_to articles_path  do%>
+<button type="button" class="btn btn-info">Back</button>
+<% end %>
+</div>

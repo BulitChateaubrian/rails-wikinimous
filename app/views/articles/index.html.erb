@@ -1,0 +1,18 @@
+<br>
+<br>
+<h1>My articles</h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+    <%= link_to article.title, article_path(article) %>
+    <%= link_to article_path(article), method: :delete, data: { confirm: "Are you sure ?"} do%>
+    <i class="fa-solid fa-trash-can"></i>
+    <% end %>
+ </li>
+
+  <% end %>
+</ul>
+
+<%= link_to new_article_path  do%>
+<button type="button" class="btn btn-primary">Create new article</button>
+<% end %>
